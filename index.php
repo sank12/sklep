@@ -57,7 +57,7 @@ $zapytanie = mysql_query("SELECT * FROM uzytkownicy WHERE `login` = '{$_POST['lo
 // jeśli zalogowano, to przenosimy do zalogowanych userow
 if (@$_SESSION['zalogowany'] == 1)
 {
-    header("Location: zalogowany.php");
+    header("Location: index.php");
     return;
 }
 
@@ -70,41 +70,35 @@ echo '<br>Nie byłeś zalogowany albo zostałeś wylogowany<br><a href="index.ph
 
 
 ?>
-
+<html>
+    <body>
+    </div>
+  <div class="odstep"></div>
+  <div class="odstep"></div>
+  <div class="odstep"></div>
+    <div class="container">
       <div class="row">
-        <div class="col-md-6">
-            <h1>Logowanie:</h1>
-             <form method="POST" action="index.php?wyslano=tak">
+        <div class="col-md-4">
+          <h1 class="text-center">Wybierz kategorie!</h1>
+          <p class="text-center">Jedzenie</p>
+          <p class="text-center">Picie</p>
+          <p class="text-center">Zabawki</p>
+          <p class="text-center">Żeczy codziennego uzytku</p>
           
-
-
-
-
-<div class="form-group">
-<input  class="form-control" type="text" name="login" maxlength="32" placeholder="login"></div>
-                 <div class="form-group">
-<input  class="form-control" type="password" name="haslo" maxlength="32" placeholder="haslo"></div>
-
-
-          <div id='l_button_lewy'><button type="submit" name="submit" class="btn btn-info btn-block ">Zaloguj</button></div>
-           </form>
-         
         </div>
+        <div class="col-md-8">
+         <?php
+         echo "asfasfasf";
          
-        <div class="col-md-5">
-          <h1>Witaj na stronie naszego sklepu!</h1>
          
-          <p>
-             Cieszymy się że postanowiłeś odwiedzić naszą stronę,
-             aby móc korzystać z naszych usług musisz się zarejestrować
-             i zalogować. Posiadamy duży wybór towarów które na pewno Cię 
-             zainteresują. Wybierz towar dla siebie i zamów go!
-             
-             
-             <br>Miłego korzystania!
-          </p>
+         
+         ?>
         </div>
       </div>
+    </div>
+  </body>
+
+</html>
 
   </body>
 </html>

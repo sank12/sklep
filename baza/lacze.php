@@ -4,7 +4,7 @@
     $adres = '127.0.0.1';
     $uzytkownik = 'root';
     $haslo = '';
-    $nazwa_bazy = 'projektsklep';
+    $nazwa_bazy = 'projektsklep1';
     // ustanawiamy połączenie z bazą, jak się nie łączy, wyświetlamy błąd
     $connection = @mysql_connect($adres, $uzytkownik, $haslo)
     or die('Brak polaczenia z serwerem MySQL.<br />Błąd: '.mysql_error());
