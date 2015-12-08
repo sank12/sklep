@@ -87,12 +87,32 @@ echo '<br>Nie byłeś zalogowany albo zostałeś wylogowany<br><a href="index.ph
           
         </div>
         <div class="col-md-8">
+              <div class="col-md-8">
          <?php
-         echo "asfasfasf";
+         
+         
+       
+         $wynik = mysql_query("SELECT * FROM magazyn")
+or die('Błąd zapytania'); 
+         
+         
+         while($r = mysql_fetch_assoc($wynik)) 
+      { 
+         echo '<div class="col-md-4 thumbnail">';
+         echo "<h2><a href='dany_produkt.php?id={$r['id_produktu']}'>{$r['nazwa']}</a></h2>";
+         echo "{$r['cena']} zł<br>";
+
+         echo '</div>';
+             
+         }
+         
+        
+         
          
          
          
          ?>
+        </div>
         </div>
       </div>
     </div>

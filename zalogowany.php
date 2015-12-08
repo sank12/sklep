@@ -48,8 +48,9 @@ or die('Błąd zapytania');
          while($r = mysql_fetch_assoc($wynik)) 
       { 
          echo '<div class="col-md-4 thumbnail">';
-         echo "<h2><a href='dany_produkt.php?id={$r['Tak']}'>{$r['nazwa']}</a></h2>";
+         echo "<h2><a href='dany_produkt.php?id={$r['id_produktu']}'>{$r['nazwa']}</a></h2>";
          echo "{$r['cena']} zł<br>";
+         echo "<a class='btn btn-default' href='koszykarz.php?id={$r['id_produktu']}'>Dodaj do koszyczka</a>";
 
          echo '</div>';
              

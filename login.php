@@ -59,6 +59,13 @@ $isdupa = mysql_fetch_array(mysql_query("SELECT COUNT(*) FROM `uzytkownicy` WHER
        $_SESSION['ranga']='u';
        header("Location: index.php");
    }
+   
+   $zapytanie = mysql_query("SELECT * FROM uzytkownicy WHERE `login` = '{$_POST['login']}' AND `haslo` = '{$_POST['haslo']}'");
+
+     while($r = mysql_fetch_assoc($zapytanie)) {
+         $_SESSION['id_usera'] = $r['id'];
+     }
+     }
 /*
 $j_0 = "SELECT typ FROM uzytkownicy WHERE login= '$login' AND haslo = '$haslo'";
 echo $j_0;
@@ -70,7 +77,7 @@ $j_1 = mysql_query($j_0);
          //$_SESSION['ranga']=$r['typ'];
          //header("Location: index.php");
      }*/
-     }
+     
 
 
 $login = $_SESSION['login'];
